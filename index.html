@@ -581,7 +581,7 @@ if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)retu
 const a=e.target instanceof Element?e.target.closest('a[href^="#"]'):null;if(!a||a.target||a.hasAttribute('download'))return;
 let id;try{id=decodeURIComponent(a.getAttribute('href').slice(1))}catch(_){return}
 const el=id&&document.getElementById(id);if(!el)return;
-const B=document.body;if(pb||document.hidden||B.classList.contains('lock')||B.classList.contains('dpo')||document.documentElement.classList.contains('lite'))return;
+const B=document.body;if(pb||document.hidden||B.classList.contains('lock')||B.classList.contains('dpo'))return;
 if(Math.abs(el.getBoundingClientRect().top-60)<2)return;
 e.preventDefault();history.replaceState(null,'','#'+id);portal(a,el)})}
 }
